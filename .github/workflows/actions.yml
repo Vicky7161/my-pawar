@@ -6,5 +6,8 @@ jobs:
     steps:
       - name: first-step
         run: echo "Hello this is the first step"
-      - name: github checkout
-        uses: actions/checkout@v6
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: second-step
+        run: echo "Hello this is the second step"
