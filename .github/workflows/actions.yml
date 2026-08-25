@@ -1,5 +1,5 @@
 name: my-action
-on: [workflow_dispatch, push]
+on: workflow_dispatch
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -7,7 +7,6 @@ jobs:
       - name: first-step
         run: echo "Hello this is the first step"
   second-job:
-    needs: first-job
     runs-on: ubuntu-latest
     steps:
       - name: second-step
